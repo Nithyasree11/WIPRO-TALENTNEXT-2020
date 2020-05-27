@@ -1,0 +1,72 @@
+
+1.
+import java.io.*;
+import java.util.*;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.TreeMap;
+
+
+public class Solution {
+    private static int[] a;
+    public static void print()
+    {
+        for(int i:a)
+        {
+            System.out.print(i+" ");
+        }
+    }
+    public static int[] sort()
+    {
+        Arrays.sort(a);
+        Map m=new TreeMap();
+        int counter=0;
+        int index=0;
+        int previous=a[index];
+        for(int i:a)
+        {
+            if(i==previous)
+            {
+                counter++;
+            }
+            else{
+                m.put(counter,previous);
+                counter=0;
+            }
+            previous=i;
+        }
+        int[] b=new int[m.size()];
+        int n=m.size()-1;
+
+        return b;
+    }
+    public static void main(String[] args)
+    {
+        int[] b={10,2,3,2,2,3,8,11,12,11,12};
+        a=b;
+        int[] s=sort();
+        print();
+        System.out.println();
+        for(int i:sort()){
+            System.out.print(i+" ");
+        }
+    } 
+}
+        
+2.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class SOL {
+    static public String move(String s)
+    {
+        return s.replaceALL("[A-Z]+"," ")+s.replaceALL("[^A-Z]+"," ");
+    }
+    public static void main(String args[] )  {
+        String str="foOTBall";
+        System.out.println("After Operation");
+    }
+}
