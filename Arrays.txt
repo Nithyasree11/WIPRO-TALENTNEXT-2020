@@ -1,0 +1,281 @@
+
+                                                      ARRAYS
+
+
+1.SUM AND AVG OF ELEMENTS:
+
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+
+     Scanner sc = new Scanner(System.in);
+     
+      int sum = 0;
+      System.out.println("Enter the elements of elements:");
+      int n = sc.nextInt();
+       int[] array = new int[n];
+      System.out.println("Enter the of elements:");
+      for (int i=0; i<n; i++)
+      {
+    	  array[i] = sc.nextInt();
+      }
+      for( int num : array) {
+          sum = sum+num;
+          }
+          int avg = sum/n;
+      
+      System.out.println("Sum of array elements is:"+sum);
+       System.out.println("Avg of array elements is:"+avg);
+   }
+}
+  
+
+
+2.MAXIMUM AND MINIMUM ELEMETS IN THE ARRAY:
+
+
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+
+     Scanner sc = new Scanner(System.in);
+     
+      ;
+      System.out.println("Enter the elements of elements:");
+      int n = sc.nextInt();
+       int[] array = new int[n];
+      
+      System.out.println("Enter the of elements:");
+      for (int i=0; i<n; i++)
+      {
+    	  array[i] = sc.nextInt();
+      }
+        int max = array[0];
+        int min = array[0];
+      for( int i =0;i<n;i++) {
+          if(array[i] > max)
+          {
+            max = array[i];
+          }
+        if(array[i] < min)
+          {
+            min = array[i];
+          }
+          } System.out.println("Max of array elements is:"+max);
+       System.out.println("Min of array elements is:"+min);
+   }
+}
+  
+
+
+
+
+								
+
+
+3.ASCII VALUE:
+
+class A{
+  public static void main(String[] args) 
+   {
+ char c;  
+  for(int i=65;i<=90;i++) 
+      {
+         c =(char)i; 
+         System.out.println(i+"  =  "+c);
+      }
+   }
+}
+
+4.LARGEST AND SMALLEST IN AN ARRAY:
+
+
+class A
+{
+	public static void main(String args[])
+ {
+	int a[]=new int[]{15,27,29,04,11};
+	int smallest=a[0];
+	int largest=a[0];
+	for(int i=0;i<a.length;i++){
+	if(a[i]<smallest){
+	smallest=a[i]; }
+	if(a[i]>largest){ 
+	largest=a[i]; }}
+	System.out.println(smallest+" "+largest); 
+	}
+}
+
+5.INITIALIZE AN ARRAY AND SORT THEM:
+
+class A
+{
+public static void main(String args[])
+ {
+int [] arr = new int [] {15, 29, 04, 27, 11};     
+        int temp = 0;    
+            
+           
+        System.out.println("Elements you have entered: ");    
+        for (int i = 0; i < arr.length; i++) {     
+            System.out.print(arr[i] + " ");    
+        }    
+            
+     
+        for (int i = 0; i < arr.length; i++) {     
+            for (int j = i+1; j < arr.length; j++) {     
+               if(arr[i] > arr[j]) {    
+                   temp = arr[i];    
+                   arr[i] = arr[j];    
+                   arr[j] = temp;    
+               }     
+            }     
+        }    
+          
+        System.out.println();    
+            
+          
+        System.out.println("Elements in sorted order: ");    
+        for (int i = 0; i < arr.length; i++) {     
+            System.out.print(arr[i] + " ");    
+        }    
+    }    
+}    
+
+7.REMOVE DUPLICATES:
+
+
+import java.util.*;
+class A
+{
+  public static int removeDuplicateElements(int arr[], int n){  
+        if (n==0 || n==1){  
+            return n;  
+        }  
+        int[] temp = new int[n];  
+        int j = 0;  
+        for (int i=0; i<n-1; i++){  
+            if (arr[i] != arr[i+1]){  
+                temp[j++] = arr[i];  
+            }  
+         }  
+        temp[j++] = arr[n-1];     
+         
+        for (int i=0; i<j; i++){  
+            arr[i] = temp[i];  
+        }  
+        return j;  
+    }
+       
+    public static void main (String[] args) {  
+        int arr[] = {15,15,27,04,29,29};  
+        int length = arr.length;  
+        length = removeDuplicateElements(arr, length);  
+         
+        for (int i=0; i<length; i++)  
+           System.out.print(arr[i]+" ");  
+    }  
+}  
+
+}
+
+8.HIGHEST NUMBER OF TIMES:
+
+import java.util.*; 
+class A
+{
+  
+	
+	static int mostFrequent(int arr[], int n) 
+	{ 
+		
+		 
+		Arrays.sort(arr); 
+		int max_count = 1, res = arr[0]; 
+		int curr_count = 1; 
+		
+		for (int i = 1; i < n; i++) 
+		{ 
+			if (arr[i] == arr[i - 1]) 
+				curr_count++; 
+			else
+			{ 
+				if (curr_count > max_count) 
+				{ 
+					max_count = curr_count; 
+					res = arr[i - 1]; 
+				} 
+				curr_count = 1; 
+			} 
+		} 
+	
+		if (curr_count > max_count) 
+		{ 
+			max_count = curr_count; 
+			res = arr[n - 1]; 
+		} 
+	
+		return res; 
+	} 
+
+	public static void main (String[] args) { 
+		
+		int arr[] = {15, 5, 27, 15, 3, 29, 15}; 
+		int n = arr.length; 
+		
+		System.out.println(mostFrequent(arr,n)); 
+		
+	} 
+} 
+
+
+9.SUM OF ARRAY WITH CONDITIONS:
+
+import java.util.*;
+class A{
+  public static void main(String args[])
+  {
+    int n;
+            Scanner s = new Scanner(System.in);
+            System.out.println("Enter the size");
+            n = s.nextInt();
+            int arr[] = new int[n];
+            System.out.println("Enter the elements:");
+            for(int i=0;i<n;i++){
+                arr[i] = s.nextInt();
+               
+            }
+             s.close();
+            int num1 = 6;
+            int num2 = 7;
+            int sum = 0;
+            boolean flag = false;
+            for(int i : arr){
+                if(i == num1){
+                    flag = true;
+                }
+                if(flag == true){
+                    if(i == num2){
+                        flag = false;
+                    }
+                    continue;
+                }
+                else{
+                    if(i == 7 )
+		{
+                        sum = 6+i;
+                    }
+                    else
+                        sum = i;
+                }
+            }
+            System.out.println("The sum is "+sum);
+           
+           
+           
+    }
+
+}
+
+
+
