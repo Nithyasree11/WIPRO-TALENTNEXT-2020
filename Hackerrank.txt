@@ -44,15 +44,3 @@ for(int i=1;i<n;i++)
        
     }
 
-1)FIND THE FACTOR:
-
-public static long pthFactor(long n, long p) {
-for(int i=1;i<n;i++)
-    {
-        n=n%i;
-        if(n==0)
-        {
-            System.out.println(n);
-            
-        }
-    }
