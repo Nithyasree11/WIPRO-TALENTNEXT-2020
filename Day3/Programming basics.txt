@@ -11,7 +11,7 @@ public class A
 
  {
 
-  System.out.println(args[0] + “ technologies ”);
+  System.out.println(args[0] + â€œ technologies â€);
 
   System.out.println(args[1]);
 
