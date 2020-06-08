@@ -1,0 +1,785 @@
+                
+                                      MILESTONE1
+
+
+                           DAY 4
+
+                                  
+ISEVEN:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int isEven(int input1)
+  {
+    if(input1%2==0)
+      {
+       return 2;
+}
+  else
+{
+return 1;
+}
+
+ISODD:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int isOdd(int input1)
+  {
+  if(input1%2!=0)
+	{
+		return 2;
+	}
+	else
+	{
+		return 1;
+	}
+ }
+}
+
+LAST DIGIT:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int lastDigitOf(int input1)
+  {
+  	int s=0;
+	s=input1%10;
+	return s;
+  }
+}
+
+SECOND LAST DIGIT:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int secondLastDigitOf(int input1)
+  {
+    if(input1>9 || input1<0)
+			return(Math.abs((input1%100)/10));
+		else
+			return -1;
+	}
+
+
+
+                   DAY 5
+
+
+IS MULTIPLE:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int isMultiple(int input1,int input2)
+  {
+  	if(input1%input2==0)
+		return 2;
+	else if(input1%input2!=0)
+		return 1;
+	else 
+		return 3;
+ }
+}
+
+COUNTEVENS:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCOde
+{
+  public int countEvens(int input1,int input2,int input3,int input4,int input5)
+  {
+  	int arr[]={input1,input2,input3,input4,input5};
+	int sum=0;
+	for(int i=0;i<5;i++)
+	{
+		if(arr[i]%2==0)
+		{
+			sum=sum+1;
+		}
+	}
+	return sum;
+  }
+}
+
+
+}
+
+COUNT ODD:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int countOdds(int input1,int input2,int input3,int input4,int input5)
+  {
+  	int arr[]={input1,input2,input3,input4,input5};
+	int sum=0;
+	for(int i=0;i<5;i++)
+	{
+		if(arr[i]%2!=0)
+		{
+			sum=sum+1;
+		}
+	}
+	return sum;
+  }
+}
+
+
+COUNT EVEN OR ODD:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int countEvensOdds(int input1,int input2,int input3,int input4,int input5,String input6)
+	{
+		int arr[]={input1,input2,input3,input4,input5};
+		int even=0,odd=0;
+		String str=new String("even");
+		if(str==input6)
+		{
+			for(int i=0;i<5;i++)
+			{
+				if(arr[i]%2==0)
+				{
+					even=even+1;
+				}
+			}
+			return even;
+		}
+	
+		else
+		{
+			for(int i=0;i<5;i++)
+			{
+				if(arr[i]%2!=0)
+				{
+					odd=odd+1;
+				}
+		
+			}
+			return odd;
+		}
+	}
+}
+
+
+                         DAY 6
+
+IS PRIME:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int isPrime(int input1)
+  	{
+     		boolean flag=true;
+		for(int i=2;i<=input1/2;i++)
+		{
+			if(input1%i==0)
+			{
+				flag=false;
+				break;
+			}
+
+		}
+		if(flag)
+		{
+			return 2;
+
+		}
+		else
+		{
+			return 1;
+		}
+	}
+}
+
+FACTORIAL:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int nFactorial(int input1)
+  	{
+    		int fact=1;
+		for(int i=1;i<=input1;i++)
+		{
+			fact=fact*i;
+		}
+		return fact;
+		
+	}
+}
+
+
+NTH FIBONACCI:
+
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public long nthFibonacci(int input1)
+	{
+		if(input1==1)
+			return 0;
+		if(input1==2)
+			return 1;
+		else
+			return nthFibonacci(input1-1)+nthFibonacci(input1-2);
+	}
+}
+
+
+NTH PRIME:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int isPrime(int input1)
+	{
+		int num, count, i;
+    		n=1;
+    		count=0;
+		while (count < input1)
+		{
+      			n=n+1;
+      			for (i = 2; i <= n; i++)
+			{ 
+        			if (n % i == 0)
+				{
+         				break;
+     				}
+    			}
+      			if ( i == n)
+			{
+        	           count++;
+      			}
+    		}
+    		return  n;
+    	}
+}
+
+
+                            DAY 7
+
+PRIME NUMBERS IN A GIVEN RANGE:		
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int countPrimesInRange(int input1,int input2)
+	{
+		int count=0;
+            int n= input1;
+		boolean flag = true;;
+		for(int i=2;i<n;i++)
+		{
+			
+				if(n%i==0)
+				{
+					flag=false;
+					break;
+
+				}
+			}
+			if(true)
+			{
+				if(n>1)
+                                 count++;
+
+			}
+                     n++;
+                     if(n>input2)
+                      break;
+
+		}
+		return count;
+	}
+}
+
+
+
+
+ALL DIGIT COUNT:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int allDigitsCount(int input1)
+	{
+		int count=0;
+		while(input1!=0)
+		{
+			input1=input1/10;
+			count++;
+		}
+		return count;
+	}
+}
+
+UNIQUE DIGIT:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int  getUniqueDigitsCount(int input1) {
+		int Count = 0;
+		boolean[] unique= {false, false, false, false, false, false, false, false, false, false};
+		
+		while (input1 != 0) {
+			int digit = input1 % 10;
+			
+			if (unique[digit] == false) {
+				unique[digit] = true;
+				Count++;
+			}
+			
+			number /= 10;
+		}
+		
+		return Count;
+	}
+}
+
+
+NON REPEATED DIGIT COUNT:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int   getNonRepeatedDigitsCount(int input1) {
+	
+		int Count = 0;   
+		int[] repeat = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		
+		while (input1 != 0) {
+			int digit = input1 % 10;
+			repeat[digit]++;
+			input1/= 10;
+		}
+		
+		for (int i = 0; i < 10; i++) {
+			
+			if (repeat[i] == 1) 
+      Count++;
+		}
+		
+		return Count;
+	}
+}
+
+                              DAY 8
+
+SUM OF EVEN DIGITS:
+
+import java.io.*;
+import  java.util.*;
+class UsermainCode{
+public int EvendigitSum(int input1){
+int rem=0,sum=0;
+		
+		while(input1>0){
+			rem=input1%10;
+			
+			if(rem%2==0)
+			{
+				sum=sum+rem;
+				
+			}
+			input1=input1/10;
+	}
+			
+			
+		
+		return sum;
+
+		
+		
+	}
+}
+
+SUM OF ODD DIGIT:
+
+import java.io.*;
+import  java.util.*;
+class UsermainCode{
+public int OdddigitSum(int input1){
+int rem=0,sum=0;
+		
+		while(input1>0){
+			rem=input1%10;
+			
+			if(rem%2!=0)
+			{
+				sum=sum+rem;
+				
+			}
+			input1=input1/10;
+	}
+			
+			
+		
+		return sum;
+
+		
+		
+	}
+}
+
+
+
+SUM OF ALL DIGITS:
+
+import java.io.*;
+import  java.util.*;
+class UsermainCode{
+public int AllDigitSum(int input1){
+int rem=0,sum=0;
+		while(input1!=0)
+		{
+				
+			       rem=input1%10;
+				sum=sum+rem;
+				input1/=10;
+
+			}
+
+return sum;
+}
+}
+
+
+SUM OF ODD OR EVEN DIGITS:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int evenOrOddDigitsSum(int input1,String input2)
+	{
+		int odd=0,even=0;
+   		while(input1!=0)
+    		{
+        		int rem=input1%10;
+        		if(rem%2==0)
+        		{
+            			even=even+rem;
+        		}
+        		else
+        		{
+           			 odd=odd+rem;
+        		}
+        		input1/=10;
+    		}
+    		if(input2.equalsIgnoreCase("even"))
+    		{
+        		return even;
+		}
+    		else
+    		{
+        		return odd;
+    		}
+	}
+}
+
+                           DAY 9
+
+IS PALINDROME:
+
+import java.io.*;
+import  java.util.*;
+class UsermainCode{
+public int isPalinNum(int input1){
+int rem=0,sum=0,temp;
+		temp=input1;
+		while(input1>0)
+		{
+			rem=input1%10;
+			sum=(sum*10)+rem;
+			input1/=10;
+
+		}
+		if(temp==sum)
+		{
+			return 2;
+		}
+		else
+			return 1;
+		
+		
+		
+	}
+}
+
+
+
+PALINDROME POSSIBLE:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public int isPalindromePossible
+	{
+		ArrayList<Integer> n=new ArrayList<Integer>(5);
+		ArrayList<Integer> b=new ArrayList<Integer>(5);
+		int rem,i,count=0;
+		while(input1!=0)
+		{
+			rem=input1%10;
+			if(!m.contains(rem))
+			{
+				m.add(rem);
+				i=a.indexOf(rem);
+				n.add(i, 1);
+			}
+			else
+			{
+				i=m.indexOf(rem);
+				int d = b.get(i); 
+				d++; 
+				n.remove(i);
+				n.add(i, d);
+			}
+			input1/=10;
+		}
+		for(int c:n)
+		{
+			if(c%2!=0)
+			{
+				count++;
+			}
+		}
+		if(count<=1)
+		{
+			return 2;
+		}
+		else
+		{
+			return 1;
+		}
+	}
+}
+
+
+PIN GENERATOR:
+
+import java.io.*;
+import  java.util.*;
+class UsermainCode{
+public int getPin(int input1, int input2, int input3) {
+		
+		int pin = 0;
+		
+		
+		int ip1 = Integer.parseInt(String.valueOf(String.valueOf(input1).charAt(2)));
+		int ip2 = Integer.parseInt(String.valueOf(String.valueOf(input2).charAt(2)));
+		int ip3 = Integer.parseInt(String.valueOf(String.valueOf(input3).charAt(2)));
+		
+		if (ip1 < ip2 && ip1 < ip3) {
+			pin = ip1;
+		} else if (ip2 < ip3) {
+			pin = ip2;
+		} else {
+			pin = ip3;
+		}
+		
+		
+		ip1 = Integer.parseInt(String.valueOf(String.valueOf(input1).charAt(1)));
+		ip2 = Integer.parseInt(String.valueOf(String.valueOf(input2).charAt(1)));
+		ip3 = Integer.parseInt(String.valueOf(String.valueOf(input3).charAt(1)));
+		
+		if (ip1 < ip2 && ip1 < ip3) {
+			pin = ip1 * 10 + pin;
+		} else if (ip2 < ip3) {
+			pin = ip2 * 10 + pin;
+		} else {
+			pin = ip3 * 10 + pin;
+		}
+		
+	
+		ip1 = Integer.parseInt(String.valueOf(String.valueOf(input1).charAt(0)));
+		ip2 = Integer.parseInt(String.valueOf(String.valueOf(input2).charAt(0)));
+		ip3 = Integer.parseInt(String.valueOf(String.valueOf(input3).charAt(0)));
+		
+		if (ip1 < ip2 && ip1 < ip3) {
+			pin = ip1 * 100 + pin;
+		} else if (ip2 < ip3) {
+			pin = ip2 * 100 + pin;
+		} else {
+			pin = ip3 * 100 + pin;
+		}
+		
+		
+		int maxOfAll = 0;
+		for (int i = 0; i < 3; i++) {
+			ip1 = Integer.parseInt(String.valueOf(String.valueOf(input1).charAt(i)));
+			ip2 = Integer.parseInt(String.valueOf(String.valueOf(input2).charAt(i)));
+			ip3 = Integer.parseInt(String.valueOf(String.valueOf(input3).charAt(i)));
+			
+
+			if (ip1 > ip2 && ip1 > ip3) {
+				maxOfAll = ip1 > maxOfAll ? ip1 : maxOfAll;
+			} else if (ip2 > ip3) {
+				maxOfAll = ip2 > maxOfAll ? ip2 : maxOfAll;
+			} else {
+				maxOfAll = ip3 > maxOfAll ? ip3 : maxOfAll;
+			}
+			
+		}
+        
+		pin = maxOfAll * 1000 + pin;
+		
+		
+		return pin;
+	}
+	
+TOTAL HILL WEIGHT:
+
+
+import java.io.*;
+import  java.util.*;
+class UsermainCode{
+public int totalHillWeight(int input1,int input2,int input3){
+int rows=input1;
+		int head=input2;
+		int weight;
+		int tw=0;
+		for(int i=2;i<=rows;i++)
+		{
+			head=head+input3;
+			weight=head*i;
+			tw=tw+weight;
+
+
+		}
+		
+		return tw + input2 ;
+		
+	}
+}
+
+                            DAY 10
+
+WEIGHT OF THE STRING:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int getWeightOfString(String input1, int input2) {
+		int weight = 0;
+		
+	
+		for (int i = 0; i < input1.length(); i++) {
+			char l = input1.charAt(i);
+			
+			if (input2 == 0) {
+				if (l == 'a' || l== 'e' || l == 'i' || l == 'o' || l == 'u' || 
+					l == 'A' || l == 'E' || l == 'I' || l == 'O' || l == 'U') {
+					continue;
+				}
+			}
+			
+			if (l >= 65 && l <= 90) { 
+				weight += l - 64;
+			
+			} else if (l >= 97 && l <= 122) { 
+				weight += l - 96;
+				
+			} 
+		}
+		
+		return weight;
+	}
+
+
+MOST FREQUENT DIGIT:
+	
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int getMostFrequestDigit(int input1, int input2, int input3, int input4) {
+		String str = String.valueOf(input1) + String.valueOf(input2) + String.valueOf(input3) + String.valueOf(input4);
+		int[] digits = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; 
+		
+		for (int i = 0; i < str.length(); i++) {
+			digits[Integer.parseInt(String.valueOf(str.charAt(i)))]++;
+		}
+		
+		int mostFD = 0;
+		
+		for (int i = 0; i <= 9; i++) {
+			mostFD 	= digits[i] >= digits[mostFD] ? i : mostFD;
+		}
+		
+		return mostFD;
+	}
+
+	
+STRING PALINDROME:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+  public int getIsPalindromeString(String input1) {
+		String str = "";
+                for(int i =input1.length()-1;i>0;i--)
+                    {
+                         str+=input1.charAt(i);
+                     }
+     if(str==input1)
+     {
+      return 2;
+     }
+     else
+      {
+          return 1;
+      }
+}
+}
+
+
+SECOND WORD TO UPPERCASE:
+
+import java.io.*;
+import  java.util.*;
+class UserMainCode
+{
+	public String secondWordUpperCase
+	{
+		String[] a=input1.split(" ");
+        	if(a.length<=1)
+        	{
+           		return "LESS";
+        	}
+        	String word=a[1].toUpperCase();
+        	return word;
+    	}
+}
+
+  
+	
