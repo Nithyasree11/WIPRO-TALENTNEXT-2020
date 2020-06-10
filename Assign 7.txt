@@ -1,0 +1,34 @@
+ import java.util.*;
+ class Main {
+	private Vector<Integer> list = new Vector<Integer>();
+	
+	public Vector<Integer> saveEvenNumbers(int N) {
+		list = new Vector<Integer>();
+		
+		for (int i = 2; i <= N; i++) {
+			if (i % 2 == 0) list.add(i);
+		}
+		
+		return list;
+	}
+	
+	public Vector<Integer> printEvenNumbers() {
+		Vector<Integer> nl = new Vector<Integer>();
+		
+		for (int item : list) {
+			nl.add(item * 2);
+			System.out.println(item * 2);
+		}
+		
+		return nl;
+	}
+
+	public static void main(String[] args) {
+		Main m = new Main();
+		m.saveEvenNumbers(10);
+		m.printEvenNumbers();
+		
+
+	}
+
+}
