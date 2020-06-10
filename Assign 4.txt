@@ -1,0 +1,39 @@
+import java.util.*;
+
+	 class MyArrayList<E> extends ArrayList<E> {
+	@Override
+	 public boolean add(E e) {
+		if (e instanceof Integer || e instanceof Float || e instanceof Double) {
+			super.add(e);
+			return true;
+		} 
+    else {
+			throw new ClassCastException("Only Integer, Float, and Double are supported.");
+		}
+	}
+}
+
+class Main {
+
+	public static void main(String[] args) {
+		List<Object> l = new MyArrayList<>();
+		
+		try {
+			l.add(27);
+			l.add(1.5F);
+			l.add(3.0409D);
+			l.add("Test");
+		}
+    catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(list);
+
+	}
+
+}
+
+		
+
+	
