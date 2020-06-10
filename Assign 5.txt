@@ -1,0 +1,48 @@
+import java.util.*;
+class Employee{
+  
+	private int id;
+	private String name;
+	private String address;
+	private Double salary;
+	
+	public Employee(int id, String name, String address, Double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.salary = salary;
+	}	
+	
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", salary=" + salary + "]";
+	}
+}
+
+ class Main {
+
+	public static void main(String[] args) {
+		List<Employee> li = new ArrayList<>();
+		
+		li.add(new Employee(101, "Bob", "321 street, India", 40000.0));
+		li.add(new Employee(102, "Alice", "564 street, India", 75000.0));
+		li.add(new Employee(103, "John", "543 street, India", 30000.0));
+		li.add(new Employee(104, "Mathew", "789 street, India", 45000.0));
+		
+		Iterator<Employee> itr = list.iterator();
+		int searchId = 102;
+		while (itr.hasNext()) {
+			Employee emp = itr.next();
+			if (emp.getId() == searchId)
+				System.out.println(emp);
+		}
+	}
+
+}
+
+	
