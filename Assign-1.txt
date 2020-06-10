@@ -1,0 +1,29 @@
+BYTE,SHORT,LONG,INTEGER,FLOAT,DOUBLE:
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("RANGE OF INTEGER:");
+		System.out.println("min: " + Integer.MIN_VALUE);
+		System.out.println("max: " + Integer.MAX_VALUE);
+
+		System.out.println("RANGE OF DOUBLE:");
+		System.out.println("min: " + Double.MIN_VALUE);
+		System.out.println("max: " + Double.MAX_VALUE);
+
+		System.out.println("RANGE OF LONG:");
+		System.out.println("min: " + Long.MIN_VALUE);
+		System.out.println("max: " + Long.MAX_VALUE);
+
+		System.out.println("RANGE OF SHORT:");
+		System.out.println("min: " + Short.MIN_VALUE);
+		System.out.println("max: " + Short.MAX_VALUE);
+
+		System.out.println("RANGE OF BYTE:");
+		System.out.println("min: " + Byte.MIN_VALUE);
+		System.out.println("max: " + Byte.MAX_VALUE);
+
+		System.out.println("RANGE OF FLOAT:");
+		System.out.println("min: " + Float.MIN_VALUE);
+		System.out.println("max: " + Float.MAX_VALUE);
+    }
+}
