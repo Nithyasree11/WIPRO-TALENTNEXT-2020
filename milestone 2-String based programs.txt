@@ -1,0 +1,132 @@
+
+                                     MILESTONE -2
+
+STRING BASED PROGRAMS
+
+
+
+GetCodeThroughStrings:
+
+import java.io.*;
+import  java.util.*;
+
+
+class GetCodeThroughStrings {
+
+	public int getCodeThroughStrings(String input1){
+  //Write your code here
+		
+		String[] words = input1.split(" ");
+		int pin = 0;
+		
+		for(String word : words) {
+			pin += word.length();
+		}
+		
+		if (String.valueOf(pin).length() == 1) 
+    return pin;
+		
+		int pin2 = 0;
+
+		
+		
+		String pinStr = String.valueOf(pin);
+		for (int i = 0; i < pinStr.length(); i++) {
+			pin2 += Integer.parseInt(String.valueOf(pinStr.charAt(i)));
+		}
+		
+		return pin2;
+	}
+}
+
+
+ADDITION OF TWO STRINGS:
+  
+import.java.io.*;
+import java.io.util;
+class UserMainCode{
+public String addNumberstrings(String input1,String input2){
+                   
+                int a = Integer.ParseInt(String.valueOf(input1));
+                int b = Integer.ParseInt(String.valueOf(input2));
+	        int c = a+b;
+	
+		return String.valueOf(c);
+		
+		
+		
+	}
+	
+	}
+
+
+
+FindStringCode:
+
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class FindStringCode {
+public int findStringCode(String input1){
+String[] words = input1.split(" ");
+StringBuffer output = new StringBuffer();
+		
+        for (String word : words) {
+			
+			int sum = 0;
+
+                       for(int i=0;i<word.length/2;i++)
+
+
+{
+                            int j= word.length()-1-i;
+
+  	
+				int larger;
+				int smaller;
+				
+				if (letterToNo(word.charAt(i)) > letterToNo(word.charAt(j))) {
+					larger = letterToNo(word.charAt(i));
+					smaller = letterToNo(word.charAt(j));
+				} else {
+					larger = letterToNo(word.charAt(j));
+					smaller = letterToNo(word.charAt(i));
+				}
+					
+				
+				sum += larger - smaller;
+				
+			}
+			
+			if (word.length() % 2 == 1) {
+				sum += letterToNo(word.charAt(word.length() / 2));
+				 
+			}
+                       output.append(sum);
+			
+			
+			
+
+}
+		
+	
+		return Integer.parseInt(output.toString());
+	}
+	
+	public static int letterToNo(char ch) {
+		if (ch >= 65 && ch <= 90)
+			return ch - 64;
+			
+		if (ch >= 97 && ch <= 122)
+			return ch - 96;
+		
+		return 0;
+	}
+	
+
+		
+		
+	   
+	
+}
