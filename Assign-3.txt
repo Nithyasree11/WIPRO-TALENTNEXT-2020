@@ -1,0 +1,18 @@
+8 DIGIT VALUE:
+
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the value:");
+		
+		int in = s.nextInt();
+		
+		String out = String.format("%8s", Integer.toBinaryString(in)).replace(' ', '0');
+		System.out.println(out);
+		
+		
+		s.close();
+
+    }
+}
