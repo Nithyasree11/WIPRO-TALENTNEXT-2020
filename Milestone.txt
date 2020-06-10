@@ -41,7 +41,7 @@ class UserMainCode
  }
 }
 
-LAST DIGIT:
+.LAST DIGIT:
 
 import java.io.*;
 import  java.util.*;
@@ -72,7 +72,6 @@ class UserMainCode
 
 
                    DAY 5
-
 
 IS MULTIPLE:
 
