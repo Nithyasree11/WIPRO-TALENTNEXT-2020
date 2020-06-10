@@ -1,0 +1,36 @@
+import java.util.*;
+class Main{
+  private LinkedList<Integer> list = new LinkedList<Integer>();
+	
+	public LinkedList<Integer> saveEvenNumbers(int N) {
+		list = new LinkedList<Integer>();
+		
+		for (int i = 2; i <= N; i++) {
+			if (i % 2 == 0) list.add(i);
+		}
+		
+		return list;
+	}
+	
+	public LinkedList<Integer> printEvenNumbers() {
+		LinkedList<Integer> nl = new LinkedList<Integer>();
+		
+		for (int item : list) {
+			nl.add(item * 2);
+			System.out.println(item * 2);
+		}
+		
+		return nl;
+	}
+
+	public static void main(String[] args) {
+	Main m = new Main();
+		m.saveEvenNumbers(10);
+		m.printEvenNumbers();
+		
+
+	}
+
+}
+  
+	
